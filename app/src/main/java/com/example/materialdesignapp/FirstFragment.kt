@@ -22,6 +22,7 @@ class FirstFragment : Fragment() {
             parentFragmentManager.beginTransaction()
                 .replace(R.id.fragmentContainerView,
                     SecondFragment.newInstance())
+                .addToBackStack(null)
                 .commit()
         }
 
