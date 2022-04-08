@@ -23,6 +23,6 @@
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        style="@style/TextAppearance.MaterialComponents.Button"
-        android:text="Button" />
+        style="@style/button"
+        android:text="Custom button" />
 </LinearLayout>
