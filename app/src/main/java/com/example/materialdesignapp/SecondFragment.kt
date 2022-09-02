@@ -5,18 +5,20 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.materialdesignapp.databinding.FragmentFirstBinding
+import com.example.materialdesignapp.databinding.FragmentSecondBinding
 
 
 class SecondFragment : Fragment() {
+    private lateinit var binding: FragmentSecondBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        return inflater.inflate(R.layout.fragment_second, container, false)
+        binding = FragmentSecondBinding.inflate(inflater,container,false)
+        return binding.root
     }
 
-    companion object {
-        fun newInstance() = SecondFragment()
-    }
+
 }
