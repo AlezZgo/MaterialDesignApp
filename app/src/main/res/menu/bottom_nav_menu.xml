@@ -6,6 +6,10 @@
         android:icon="@drawable/ic_baseline_accessibility_new_24"
         android:title="first" />
     <item
+        android:id="@+id/placeholder"
+        android:title="" />
+
+    <item
         android:id="@+id/navigation_fragment_second"
         android:icon="@drawable/ic_baseline_architecture_24"
         android:title="second" />
