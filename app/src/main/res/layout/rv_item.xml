@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:layoutDescription="@xml/rv_item_scene2">
+    app:layoutDescription="@xml/rv_item_scene">
 
 
     <ImageView
@@ -46,5 +46,36 @@
         app:layout_constraintStart_toEndOf="@+id/iv"
         app:layout_constraintTop_toBottomOf="@+id/titleTextView"
         tools:text="SubTitle" />
+
+    <ImageView
+        android:id="@+id/star1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toStartOf="@+id/star2"
+        app:layout_constraintTop_toBottomOf="@+id/iv"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/star2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="@+id/iv"
+        app:layout_constraintStart_toStartOf="@+id/iv"
+        app:layout_constraintTop_toBottomOf="@+id/iv"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/star3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/star2"
+        app:layout_constraintTop_toBottomOf="@+id/iv"
+        app:srcCompat="@android:drawable/btn_star_big_on"
+        tools:visibility="visible" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
