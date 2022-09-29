@@ -1,5 +1,6 @@
 package com.example.materialdesignapp
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -38,6 +39,7 @@ class SecondFragment : Fragment() {
 
         vm.colors.observe(viewLifecycleOwner){
             colorAdapter.submitList(it)
+            binding.ivCurvimeter.setColorFilter(Color.parseColor(it.filter { it.selected }.first().hex))
         }
 
     }
