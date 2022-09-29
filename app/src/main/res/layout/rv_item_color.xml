@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="50dp"
+    android:layout_height="50dp">
+
+    <ImageView
+        android:id="@+id/ivBackground"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/ic_circle"
+        app:tint="#F57C00"
+        tools:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/icCircle"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_gravity="center"
+        android:backgroundTint="#F57C00"
+        app:srcCompat="@drawable/ic_circle"
+        tools:visibility="visible" />
+
+</FrameLayout>
+

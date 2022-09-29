@@ -22,6 +22,9 @@
                android:alpha="0" />
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/iv" />
+        <OnSwipe
+            motion:dragDirection="dragLeft"
+            motion:touchAnchorSide="right" />
     </Transition>
 
     <ConstraintSet android:id="@+id/start">

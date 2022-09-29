@@ -2,4 +2,19 @@
     <string name="app_name">MaterialDesignApp</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    
+    <string-array name="color_set">
+        <item>#BE3838</item>
+        <item>#1D32EF</item>
+        <item>#45CC24</item>
+        <item>#E7EB14</item>
+        <item>#D91AA3</item>
+        <item>#E5631A</item>
+        <item>#1AE5CD</item>
+        <item>#69AEEE</item>
+        <item>#4F21D2</item>
+        <item>#DD9889</item>
+        <item>#EFB111</item>
+        <item>#8F8F8F</item>
+    </string-array>
 </resources>
