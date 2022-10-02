@@ -2,13 +2,12 @@ package com.example.materialdesignapp
 
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.materialdesignapp.colorAdapter.ColorAdapter
-import com.example.materialdesignapp.databinding.FragmentFirstBinding
 import com.example.materialdesignapp.databinding.FragmentSecondBinding
 
 
@@ -16,8 +15,8 @@ class SecondFragment : Fragment() {
     private lateinit var binding: FragmentSecondBinding
 
     val vm by viewModels<SecondFragmentViewModel>()
-fix    private val colorAdapter by lazy {
-        ColorAdapter{
+    private val colorAdapter by lazy {
+        ColorAdapter {
             vm.setSelectedColor(it)
         }
     }
@@ -26,7 +25,7 @@ fix    private val colorAdapter by lazy {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View? {
-        binding = FragmentSecondBinding.inflate(inflater,container,false)
+        binding = FragmentSecondBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -37,9 +36,10 @@ fix    private val colorAdapter by lazy {
 
         binding.rvColors.adapter = colorAdapter
 
-        vm.colors.observe(viewLifecycleOwner){
+        vm.colors.observe(viewLifecycleOwner) {
             colorAdapter.submitList(it)
-            binding.ivCurvimeter.setColorFilter(Color.parseColor(it.filter { it.selected }.first().hex))
+            binding.ivCurvimeter.setColorFilter(Color.parseColor(it.filter { it.selected }
+                .first().hex))
         }
 
     }
