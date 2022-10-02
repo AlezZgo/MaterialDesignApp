@@ -21,6 +21,9 @@
         <action
             android:id="@+id/action_navigation_fragment_second_to_moneyFragment"
             app:destination="@id/moneyFragment" />
+        <action
+            android:id="@+id/action_navigation_fragment_second_to_personCardFragment"
+            app:destination="@id/personCardFragment" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
@@ -37,4 +40,13 @@
         android:name="com.example.materialdesignapp.MoneyFragment"
         android:label="fragment_money"
         tools:layout="@layout/fragment_money" />
+    <fragment
+        android:id="@+id/personCardFragment"
+        android:name="com.example.materialdesignapp.PersonCardFragment"
+        android:label="fragment_person_card"
+        tools:layout="@layout/fragment_person_card" >
+        <argument
+            android:name="Person"
+            app:argType="com.example.materialdesignapp.Person" />
+    </fragment>
 </navigation>

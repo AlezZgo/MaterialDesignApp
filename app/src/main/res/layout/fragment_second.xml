@@ -9,47 +9,6 @@
     tools:context=".SecondFragment">
 
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/cvCont"
-        android:layout_width="0dp"
-        android:layout_height="150dp"
-        android:transitionName="card_cont"
-        app:layout_constraintBottom_toTopOf="@+id/rvColors"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivCurvimeter">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:elevation="16dp">
-
-            <ImageView
-                android:id="@+id/iv_dollar"
-                android:layout_width="92dp"
-                android:layout_height="70dp"
-                android:src="@drawable/ic_baseline_attach_money_24"
-                android:transitionName="iv_dollar"
-                app:layout_constraintBottom_toTopOf="@+id/btn_coin"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btn_coin"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Coin"
-                android:transitionName="btn_coin"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/iv_dollar" />
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
     <ImageView
         android:id="@+id/ivCurvimeter"
         android:layout_width="100dp"
@@ -59,8 +18,7 @@
         app:layout_constraintBottom_toTopOf="@+id/rvColors"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvColors"
@@ -76,6 +34,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/rv_item_color" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCards"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/ivCurvimeter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/cv_person" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
