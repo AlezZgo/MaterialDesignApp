@@ -56,6 +56,15 @@ class SecondFragment : Fragment() {
             findNavController().navigate(SecondFragmentDirections.actionNavigationFragmentSecondToThirdFragment(),extras)
         }
 
+        binding.btnCoin.setOnClickListener {
+            val extras = FragmentNavigatorExtras(
+                binding.cvCont to "card_cont",
+                binding.ivDollar to "iv_dollar",
+                binding.btnCoin to "btn_coin",
+            )
+            findNavController().navigate(SecondFragmentDirections.actionNavigationFragmentSecondToMoneyFragment(),extras)
+        }
+
     }
 
 

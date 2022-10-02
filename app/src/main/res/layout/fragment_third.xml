@@ -10,9 +10,8 @@
 
     <ImageView
         android:id="@+id/ivCurvimeter"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:tint="#FDC600"
+        android:layout_width="258dp"
+        android:layout_height="129dp"
         android:transitionName="iv_cur"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"

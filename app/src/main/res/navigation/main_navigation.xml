@@ -18,10 +18,23 @@
         <action
             android:id="@+id/action_navigation_fragment_second_to_thirdFragment"
             app:destination="@id/thirdFragment" />
+        <action
+            android:id="@+id/action_navigation_fragment_second_to_moneyFragment"
+            app:destination="@id/moneyFragment" />
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
         android:name="com.example.materialdesignapp.ThirdFragment"
         android:label="fragment_third"
-        tools:layout="@layout/fragment_third" />
+        tools:layout="@layout/fragment_third" >
+        <argument
+            android:name="Color"
+            app:argType="string"
+            android:defaultValue="#000000" />
+    </fragment>
+    <fragment
+        android:id="@+id/moneyFragment"
+        android:name="com.example.materialdesignapp.MoneyFragment"
+        android:label="fragment_money"
+        tools:layout="@layout/fragment_money" />
 </navigation>
