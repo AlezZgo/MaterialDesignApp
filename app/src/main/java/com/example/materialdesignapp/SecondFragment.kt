@@ -2,11 +2,15 @@ package com.example.materialdesignapp
 
 import android.graphics.Color
 import android.os.Bundle
+import android.transition.ChangeBounds
+import android.transition.TransitionInflater
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.FragmentNavigatorExtras
+import androidx.navigation.fragment.findNavController
 import com.example.materialdesignapp.colorAdapter.ColorAdapter
 import com.example.materialdesignapp.databinding.FragmentSecondBinding
 
@@ -37,9 +41,19 @@ class SecondFragment : Fragment() {
         binding.rvColors.adapter = colorAdapter
 
         vm.colors.observe(viewLifecycleOwner) {
+
             colorAdapter.submitList(it)
-            binding.ivCurvimeter.setColorFilter(Color.parseColor(it.filter { it.selected }
-                .first().hex))
+
+            binding.ivCurvimeter.setColorFilter(
+                Color.parseColor(it.filter { it.selected }.first().hex)
+            )
+        }
+
+        binding.ivCurvimeter.setOnClickListener {
+            val extras = FragmentNavigatorExtras(
+                binding.ivCurvimeter to "iv_cur",
+            )
+            findNavController().navigate(SecondFragmentDirections.actionNavigationFragmentSecondToThirdFragment(),extras)
         }
 
     }

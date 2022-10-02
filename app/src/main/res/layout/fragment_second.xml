@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -11,9 +11,15 @@
 
     <ImageView
         android:id="@+id/ivCurvimeter"
-        android:layout_width="112dp"
-        android:layout_height="99dp"
-        android:src="@drawable/ic_baseline_architecture_24" />
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/ic_baseline_architecture_24"
+        android:transitionName="iv_cur"
+        app:layout_constraintBottom_toTopOf="@+id/rvColors"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvColors"
@@ -24,7 +30,11 @@
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:listitem="@layout/rv_item_color" />
 
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
