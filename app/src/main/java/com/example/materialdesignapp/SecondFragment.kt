@@ -16,7 +16,7 @@ class SecondFragment : Fragment() {
     private lateinit var binding: FragmentSecondBinding
 
     val vm by viewModels<SecondFragmentViewModel>()
-    val colorAdapter by lazy {
+fix    private val colorAdapter by lazy {
         ColorAdapter{
             vm.setSelectedColor(it)
         }
