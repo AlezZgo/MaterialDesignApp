@@ -44,10 +44,12 @@ class FirstFragment : Fragment() {
 
         vm.requested.observe(viewLifecycleOwner){ requested->
             if(requested){
+                binding.button.text = getString(R.string.requested)
                 binding.button.setIconTintResource(R.color.gray)
                 binding.button.setBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.white))
                 binding.button.setTextColor(ContextCompat.getColor(requireActivity(),R.color.gray))
             }else{
+                binding.button.text = getString(R.string.request)
                 binding.button.setIconTintResource(R.color.white)
                 binding.button.setBackgroundColor(ContextCompat.getColor(requireActivity(),R.color.orange))
                 binding.button.setTextColor(ContextCompat.getColor(requireActivity(),R.color.white))

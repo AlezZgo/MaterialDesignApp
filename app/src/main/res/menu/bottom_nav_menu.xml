@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_baseline_accessibility_new_24"
         android:title="first" />
     <item
-        android:id="@+id/placeholder"
+        android:id="@+id/navigation_fragment_fourth"
         android:title="" />
 
     <item

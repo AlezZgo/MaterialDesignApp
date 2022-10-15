@@ -23,6 +23,7 @@
        </KeyFrameSet>
         <OnClick motion:targetId="@+id/iv" />
         <OnSwipe
+            motion:touchAnchorId="@+id/iv"
             motion:dragDirection="dragLeft"
             motion:touchAnchorSide="right" />
     </Transition>

@@ -1,6 +1,7 @@
 package com.example.materialdesignapp
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
@@ -23,6 +24,9 @@ class MainActivity : AppCompatActivity() {
         navView.background = null
         navView.setupWithNavController(navController)
         setContentView(binding.root)
+        binding.fab.setOnClickListener{
+            navView.findViewById<View>(R.id.navigation_fragment_fourth).performClick()
+        }
     }
 
     override fun onSupportNavigateUp(): Boolean {

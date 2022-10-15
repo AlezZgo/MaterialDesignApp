@@ -35,9 +35,6 @@ class PersonCardVH(
         ViewCompat.setTransitionName(binding.ivAvatar,"${person.name}avatar")
         ViewCompat.setTransitionName(binding.cvCont, "${person.name}cont")
         ViewCompat.setTransitionName(binding.btnName, "${person.name}btn")
-        Glide.with(binding.ivAvatar.context)
-            .load(person.iconId)
-            .into(binding.ivAvatar)
 
     }
 }

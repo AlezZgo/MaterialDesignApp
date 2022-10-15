@@ -49,4 +49,9 @@
             android:name="Person"
             app:argType="com.example.materialdesignapp.Person" />
     </fragment>
+    <fragment
+        android:id="@+id/navigation_fragment_fourth"
+        android:name="com.example.materialdesignapp.FourthFragment"
+        android:label="fragment_fourth"
+        tools:layout="@layout/fragment_fourth" />
 </navigation>
