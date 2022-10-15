@@ -1,11 +1,13 @@
 package com.example.materialdesignapp.cardAdapter
 
+import android.view.animation.AnimationUtils
 import androidx.core.view.ViewCompat
 import androidx.navigation.Navigator
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.materialdesignapp.Person
+import com.example.materialdesignapp.R
 import com.example.materialdesignapp.databinding.CvPersonBinding
 
 class PersonCardVH(
@@ -16,7 +18,10 @@ class PersonCardVH(
         onCardClick : (person : Person, extras : Navigator.Extras) -> Unit
     ) = with(binding) {
 
+        val context = binding.root.context
         btnName.text = person.name
+
+        binding.root.startAnimation(AnimationUtils.loadAnimation(context,R.anim.rv_item_scroll_enter_anim))
 
         val extras =  FragmentNavigatorExtras(
             binding.ivAvatar to "iv_avatar",

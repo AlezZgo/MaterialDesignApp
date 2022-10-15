@@ -39,6 +39,16 @@ class SecondFragment : Fragment() {
         Person("Andrew",800,R.drawable.ic_andrew),
         Person("Kiara",1200,R.drawable.ic_kiara),
         Person("Maryann",1300,R.drawable.ic_maryann),
+        Person("Raf",1100,R.drawable.ic_raf),
+        Person("Alex",1000,R.drawable.ic_alex),
+        Person("Andrew",800,R.drawable.ic_andrew),
+        Person("Kiara",1200,R.drawable.ic_kiara),
+        Person("Maryann",1300,R.drawable.ic_maryann),
+        Person("Raf",1100,R.drawable.ic_raf),
+        Person("Alex",1000,R.drawable.ic_alex),
+        Person("Andrew",800,R.drawable.ic_andrew),
+        Person("Kiara",1200,R.drawable.ic_kiara),
+        Person("Maryann",1300,R.drawable.ic_maryann),
         Person("Raf",1100,R.drawable.ic_raf)
     )
 
