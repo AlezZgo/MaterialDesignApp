@@ -6,26 +6,38 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
+import com.example.materialdesignapp.databinding.FragmentFourthBinding
+import com.example.materialdesignapp.multiTypeAdapter.PersonAdCardAdapter
 
 class FourthFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = FourthFragment()
-    }
+    private val viewModel by viewModels<FourthViewModel>()
+    private lateinit var binding : FragmentFourthBinding
 
-    private lateinit var viewModel: FourthViewModel
+    private val adapter by lazy {
+        PersonAdCardAdapter()
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.fragment_fourth, container, false)
+        binding = FragmentFourthBinding.inflate(inflater)
+        return binding.root
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(FourthViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        binding.rv.adapter = adapter
+        viewModel.personAdCards.observe(viewLifecycleOwner){
+            adapter.items = it
+        }
+        binding.refreshButton.setOnClickListener {
+            viewModel.personAdCards.postValue(
+                viewModel.personAdCards.value?.reversed()
+            )
+        }
     }
 
 }

@@ -47,7 +47,7 @@
         tools:layout="@layout/fragment_person_card" >
         <argument
             android:name="Person"
-            app:argType="com.example.materialdesignapp.Person" />
+            app:argType="com.example.materialdesignapp.FourthFragmentViewItem$Person" />
     </fragment>
     <fragment
         android:id="@+id/navigation_fragment_fourth"

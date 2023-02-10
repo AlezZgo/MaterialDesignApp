@@ -2,7 +2,7 @@ package com.example.materialdesignapp.colorAdapter
 
 import androidx.recyclerview.widget.DiffUtil
 import com.example.materialdesignapp.ColorModel
-import com.example.materialdesignapp.Person
+import com.example.materialdesignapp.FourthFragmentViewItem.Person
 
 class ColorDiffUtilCallback : DiffUtil.ItemCallback<ColorModel>() {
 

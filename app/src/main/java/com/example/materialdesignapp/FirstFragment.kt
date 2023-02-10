@@ -20,11 +20,11 @@ class FirstFragment : Fragment() {
     val vm by viewModels<FirstFragmentViewModel>()
 
     private val persons = listOf(
-        Person("Alex",1000,R.drawable.ic_alex),
-        Person("Andrew",800,R.drawable.ic_andrew),
-        Person("Kiara",1200,R.drawable.ic_kiara),
-        Person("Maryann",1300,R.drawable.ic_maryann),
-        Person("Raf",1100,R.drawable.ic_raf)
+        FourthFragmentViewItem.Person("Alex", 1000, R.drawable.ic_alex),
+        FourthFragmentViewItem.Person("Andrew",800,R.drawable.ic_andrew),
+        FourthFragmentViewItem.Person("Kiara",1200,R.drawable.ic_kiara),
+        FourthFragmentViewItem.Person("Maryann",1300,R.drawable.ic_maryann),
+        FourthFragmentViewItem.Person("Raf",1100,R.drawable.ic_raf)
     )
 
     private val adapter by lazy {

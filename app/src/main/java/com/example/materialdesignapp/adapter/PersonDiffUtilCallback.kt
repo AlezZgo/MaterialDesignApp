@@ -1,7 +1,7 @@
 package com.example.materialdesignapp.adapter
 
 import androidx.recyclerview.widget.DiffUtil
-import com.example.materialdesignapp.Person
+import com.example.materialdesignapp.FourthFragmentViewItem.Person
 
 class PersonDiffUtilCallback : DiffUtil.ItemCallback<Person>() {
 

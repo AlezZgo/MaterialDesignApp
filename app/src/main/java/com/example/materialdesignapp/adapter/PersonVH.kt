@@ -4,7 +4,7 @@ import android.graphics.drawable.Drawable
 import androidx.recyclerview.widget.RecyclerView
 import androidx.swiperefreshlayout.widget.CircularProgressDrawable
 import com.bumptech.glide.Glide
-import com.example.materialdesignapp.Person
+import com.example.materialdesignapp.FourthFragmentViewItem.Person
 import com.example.materialdesignapp.R
 import com.example.materialdesignapp.databinding.RvItemBinding
 
