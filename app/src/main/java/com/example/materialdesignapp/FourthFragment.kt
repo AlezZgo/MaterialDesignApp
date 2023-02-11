@@ -31,7 +31,7 @@ class FourthFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.rv.adapter = adapter
         viewModel.personAdCards.observe(viewLifecycleOwner){
-            adapter.items = it
+            adapter.submitList(it)
         }
         binding.refreshButton.setOnClickListener {
             viewModel.personAdCards.postValue(
