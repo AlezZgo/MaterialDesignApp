@@ -33,7 +33,6 @@ class FourthViewModel : ViewModel() {
             FourthFragmentViewItem.Advertisement("New Microphone",18),
         )
     )
-
 }
 
 sealed class FourthFragmentViewItem : Match<FourthFragmentViewItem> {
@@ -47,7 +46,6 @@ sealed class FourthFragmentViewItem : Match<FourthFragmentViewItem> {
         override fun matchesId(model: FourthFragmentViewItem): Boolean {
             return model.id == id
         }
-        //todo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         override fun matches(model: FourthFragmentViewItem): Boolean {
             return model == this
         }
@@ -62,7 +60,7 @@ sealed class FourthFragmentViewItem : Match<FourthFragmentViewItem> {
     ) : Parcelable, FourthFragmentViewItem() {
         override fun matchesId(model: FourthFragmentViewItem): Boolean {
             return model.id == id
-        }//todo!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        }
 
         override fun matches(model: FourthFragmentViewItem): Boolean {
             return model == this
