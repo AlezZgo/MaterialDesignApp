@@ -38,6 +38,9 @@ class FourthFragment : Fragment() {
                 viewModel.personAdCards.value?.reversed()
             )
         }
+        binding.getBtn.setOnClickListener {
+            viewModel.fetch()
+        }
     }
 
 }

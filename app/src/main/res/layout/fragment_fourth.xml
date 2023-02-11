@@ -12,6 +12,13 @@
         android:layout_height="wrap_content"
         android:text="Reverse" />
 
+    <Button
+        android:gravity="right"
+        android:id="@+id/getBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Get" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
